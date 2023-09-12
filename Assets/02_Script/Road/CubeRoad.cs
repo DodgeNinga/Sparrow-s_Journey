@@ -21,6 +21,16 @@ public class CubeRoad : RoadRoot
 
     }
 
+    private LookDir GetLookDir(Vector3 dir)
+    {
+
+        if (dir == transform.forward) return LookDir.front;
+        else if (dir == transform.right) return LookDir.right;
+        else if (dir == -transform.forward) return LookDir.back;
+        else return LookDir.left;
+
+    }
+
     public override Vector3 GetMovePos()
     {
 
@@ -31,7 +41,22 @@ public class CubeRoad : RoadRoot
     public override void ConnectRoad()
     {
 
+        foreach(var dir in rayPoints)
+        {
 
+            if(Physics.Raycast(transform.position, dir, out var hit, 1.3f, LayerMask.GetMask("Road")))
+            {
+
+                if(hit.transform.TryGetComponent<RoadRoot>(out var compo))
+                {
+
+                    connected.Add(new RoadClass {road = compo, dir = GetLookDir(dir)});
+
+                }
+
+            }
+
+        }
 
     }
 

@@ -20,6 +20,7 @@ public class RoadClass
 
 public abstract class RoadRoot : MonoBehaviour
 {
+
     /// <summary>
     /// 연결된 모든 길
     /// </summary>
@@ -34,8 +35,12 @@ public abstract class RoadRoot : MonoBehaviour
     /// 오브젝트에 이동 가능한 좌표 반환
     /// </summary>
     /// <returns></returns>
-    public abstract void ConnectRoad();
     public abstract Vector3 GetMovePos();
+
+    /// <summary>
+    /// 길 연결하기
+    /// </summary>
+    public abstract void ConnectRoad();
 
 #if UNITY_EDITOR
 
