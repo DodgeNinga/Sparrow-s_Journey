@@ -76,22 +76,26 @@ public class PlayerController : MonoBehaviour
         CreateConnectKey(currentRoad, visQueue, roadContainer, visited, (null, 0));
 
         while(visQueue.Count > 0) 
-        { 
-            
+        {
+
+            Debug.Log("무한무한");
+
             var current = visQueue.Dequeue();
             var last = roadContainer[current].Last();
 
-            if (IsCrossRoad(last, visited)) //교차로라면?
-            {
+            visited.Add(last);
 
-                CreateConnectKey(last, visQueue, roadContainer, visited, current);
-
-            }
-            else if(last == end) //도착이라면?
+            if(last == end) //도착이라면?
             {
 
                 endKey = current;
                 break;
+
+            }
+            else if (IsCrossRoad(last, visited)) //교차로라면?
+            {
+
+                CreateConnectKey(last, visQueue, roadContainer, visited, current);
 
             }
             else //아니라면?
@@ -117,6 +121,12 @@ public class PlayerController : MonoBehaviour
             playerMove.ExecuteMove(roadContainer[endKey].ToList(), () => { clickAble = true; });
 
         }
+        else
+        {
+
+            clickAble = true;
+
+        }
 
 
     }
@@ -132,7 +142,7 @@ public class PlayerController : MonoBehaviour
         {
 
             if (visited.Contains(current.connected[i].road) || 
-                !current.connected[i].road.moveAble) continue;
+                !current.connected[i].road.moveAble || roadContainer.ContainsKey((current, i))) continue;
 
             var obj = (current, i);
             roadContainer.Add(obj, new());
@@ -145,7 +155,6 @@ public class PlayerController : MonoBehaviour
 
             }
 
-            visited.Add(current.connected[i].road);
             roadContainer[obj].Add(current.connected[i].road);
 
         }
