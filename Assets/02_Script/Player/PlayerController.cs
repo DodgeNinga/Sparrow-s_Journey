@@ -78,8 +78,6 @@ public class PlayerController : MonoBehaviour
         while(visQueue.Count > 0) 
         {
 
-            Debug.Log("무한무한");
-
             var current = visQueue.Dequeue();
             var last = roadContainer[current].Last();
 
