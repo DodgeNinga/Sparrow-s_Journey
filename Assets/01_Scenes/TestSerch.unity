@@ -2706,7 +2706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 0
+  moveAble: 1
 --- !u!65 &1474681521
 BoxCollider:
   m_ObjectHideFlags: 0
