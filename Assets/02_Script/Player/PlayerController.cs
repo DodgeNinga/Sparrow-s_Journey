@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
     {
 
         (RoadRoot road, int idx) endKey = (null, 0);
-        Dictionary<(RoadRoot road, int idx), List<RoadRoot>> roadContainer = new();
+        Dictionary<(RoadRoot road, int idx), List<RoadClass>> roadContainer = new();
         Queue<(RoadRoot road, int idx)> visQueue = new(); //방문큐
         HashSet<RoadRoot> visited = new() { currentRoad }; //방문했니?
 
@@ -81,29 +81,29 @@ public class PlayerController : MonoBehaviour
             var current = visQueue.Dequeue();
             var last = roadContainer[current].Last();
 
-            visited.Add(last);
+            visited.Add(last.road);
 
-            if(last == end) //도착이라면?
+            if(last.road == end) //도착이라면?
             {
 
                 endKey = current;
                 break;
 
             }
-            else if (IsCrossRoad(last, visited)) //교차로라면?
+            else if (IsCrossRoad(last.road, visited)) //교차로라면?
             {
 
-                CreateConnectKey(last, visQueue, roadContainer, visited, current);
+                CreateConnectKey(last.road, visQueue, roadContainer, visited, current);
 
             }
             else //아니라면?
             {
 
-                if(GetConnectRoadIndex(last, visited) != -1)
+                if(GetConnectRoadIndex(last.road, visited) != -1)
                 {
 
                     roadContainer[current].Add(
-                        last.connected[GetConnectRoadIndex(last, visited)].road);
+                        last.road.connected[GetConnectRoadIndex(last.road, visited)]);
                     visQueue.Enqueue(current);
 
                 }
@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
         if(endKey.road != null)
         {
 
-            currentRoad = roadContainer[endKey].Last();
+            currentRoad = roadContainer[endKey].Last().road;
             playerMove.ExecuteMove(roadContainer[endKey].ToList(), () => { clickAble = true; });
 
         }
@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
 
     private void CreateConnectKey(RoadRoot current, 
         Queue<(RoadRoot road, int idx)> visQueue,
-        Dictionary<(RoadRoot road, int idx), List<RoadRoot>> roadContainer,
+        Dictionary<(RoadRoot road, int idx), List<RoadClass>> roadContainer,
         HashSet<RoadRoot> visited, 
         (RoadRoot road, int idx) beforeKey)
     {
@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour
 
             }
 
-            roadContainer[obj].Add(current.connected[i].road);
+            roadContainer[obj].Add(current.connected[i]);
 
         }
 

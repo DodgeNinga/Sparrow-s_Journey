@@ -29,7 +29,7 @@ public abstract class RoadRoot : MonoBehaviour
     /// <summary>
     /// 이동 가능한가?
     /// </summary>
-    public bool moveAble = true;
+    [field:SerializeField] public bool moveAble { get; set; } = true;
 
     /// <summary>
     /// 오브젝트에 이동 가능한 좌표 반환

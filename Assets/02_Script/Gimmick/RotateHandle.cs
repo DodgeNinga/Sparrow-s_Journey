@@ -85,8 +85,8 @@ public class RotateHandle : MonoBehaviour
         {
 
             RotateOffset.X => (new Vector3(value, 0, 0), value),
-            RotateOffset.Y => (new Vector3(0, value, 0), 0),
-            RotateOffset.Z => (new Vector3(0, 0, value), 0),
+            RotateOffset.Y => (new Vector3(0, value, 0), value),
+            RotateOffset.Z => (new Vector3(0, 0, value), value),
             _ => (Vector3.zero, 0)
 
         };
