@@ -21,13 +21,26 @@ public class RotateHandle : MonoBehaviour
     [SerializeField] private float rotateSpeed;
     [SerializeField] private Transform rotateObject;
     [SerializeField] private UnityEvent<float> rotateChangeEvent;
+    [SerializeField] private UnityEvent rotateStartEvent, rotateEndEvent;
+    [SerializeField] private bool containsRot = false;
 
+    private PlayerController playerController;
     private Vector3 originPos;
-
+    private List<RoadRoot> roads;
     private bool isKeyDown;
     private bool isAutoRotating = false;
+    private float lastRotate;
 
     private float[] rotateArr => new float[] { 0, 90, 180, 270, 360 };
+
+    private void Awake()
+    {
+
+        playerController = FindObjectOfType<PlayerController>();
+
+        roads = rotateObject.GetComponentsInChildren<RoadRoot>().ToList();
+
+    }
 
     private void Update()
     {
@@ -38,7 +51,7 @@ public class RotateHandle : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && isAutoRotating == false)
         {
-
+            
             isKeyDown = false;
             isAutoRotating = true;
 
@@ -48,6 +61,8 @@ public class RotateHandle : MonoBehaviour
             {
 
                 isAutoRotating = false;
+                rotateEndEvent?.Invoke();
+                lastRotate = vec.value;
                 rotateChangeEvent?.Invoke(vec.value);
                 
                 
@@ -60,6 +75,16 @@ public class RotateHandle : MonoBehaviour
     private void OnMouseDown()
     {
 
+        rotateStartEvent?.Invoke();
+
+        if (!containsRot)
+        {
+
+            if (roads.Contains(playerController.currentRoad)) return;
+
+        }
+
+        if (!playerController.clickAble) return;
         isKeyDown = true;
         originPos = Input.mousePosition;
 
@@ -135,7 +160,7 @@ public class RotateHandle : MonoBehaviour
 
                     var value = Mathf.Atan2(pos.x, pos.y) * Mathf.Rad2Deg;
 
-                    rotateObject.rotation = Quaternion.AngleAxis(value, Vector3.forward);
+                    rotateObject.rotation = Quaternion.AngleAxis(value + lastRotate, Vector3.forward);
 
                     break;
 

@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &20116855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &35917506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -395,7 +395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &129599229
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &140058054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &159805315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &272606044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -854,6 +854,7 @@ Transform:
   - {fileID: 1716659279}
   - {fileID: 129599227}
   - {fileID: 1474681519}
+  - {fileID: 733185776}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -905,7 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &429343837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1017,7 +1018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &433687291
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1129,7 +1130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &445582579
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1241,7 +1242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &568809164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1353,7 +1354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &661384766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1465,7 +1466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &723192286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1529,6 +1530,118 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723192283}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &733185775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 733185776}
+  - component: {fileID: 733185780}
+  - component: {fileID: 733185779}
+  - component: {fileID: 733185778}
+  - component: {fileID: 733185777}
+  m_Layer: 3
+  m_Name: Cube (31)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &733185776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733185775}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 370563553}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &733185777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733185775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2d0f01046d4744184671a7f6be194e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <connected>k__BackingField: []
+  <moveAble>k__BackingField: 1
+--- !u!65 &733185778
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733185775}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &733185779
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733185775}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 7e9dff5ae5c33f34aa77b99a9178f9da, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &733185780
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733185775}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &763098746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,7 +1690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &763098749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1689,7 +1802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &932426333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1801,7 +1914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1004775680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1982,7 +2095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ba188bc60d0f5418dcb7fc14f1f12d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRoad: {fileID: 1354216724}
+  <currentRoad>k__BackingField: {fileID: 1354216724}
   clickAble: 1
 --- !u!4 &1237167609
 Transform:
@@ -2048,7 +2161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1268921514
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2160,7 +2273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1276470655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2272,7 +2385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1317593348
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2384,7 +2497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1341228972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2496,7 +2609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1354216725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2608,7 +2721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1474681521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2827,7 +2940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1553737893
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2939,7 +3052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1625218415
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3051,7 +3164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1716659281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3163,7 +3276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1726298183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3275,7 +3388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1764333026
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3387,7 +3500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1877757299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3499,7 +3612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &1894447739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3611,7 +3724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &2011436657
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3808,7 +3921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &2123490001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3920,7 +4033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
-  moveAble: 1
+  <moveAble>k__BackingField: 1
 --- !u!65 &2139755266
 BoxCollider:
   m_ObjectHideFlags: 0
