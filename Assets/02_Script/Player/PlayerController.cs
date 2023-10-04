@@ -8,7 +8,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    [SerializeField] private RoadRoot currentRoad;
+    [field:SerializeField] public RoadRoot currentRoad { get; private set; }
 
     private PlayerMove playerMove;
 

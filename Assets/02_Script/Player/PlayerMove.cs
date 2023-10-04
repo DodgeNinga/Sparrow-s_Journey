@@ -8,11 +8,13 @@ public class PlayerMove : MonoBehaviour
 
     private readonly int WALKHASH = Animator.StringToHash("Walk");
     private Animator animator;
+    private PlayerController playerController;
 
     private void Awake()
     {
         
         animator = GetComponentInChildren<Animator>();
+        playerController = GetComponent<PlayerController>();
 
     }
 
@@ -22,6 +24,7 @@ public class PlayerMove : MonoBehaviour
         Sequence seq = DOTween.Sequence();
 
         animator.SetBool(WALKHASH, true);
+        transform.SetParent(null);
 
         foreach(var item in roads)
         {
@@ -51,6 +54,7 @@ public class PlayerMove : MonoBehaviour
         {
 
             animator.SetBool(WALKHASH, false);
+            transform.SetParent(playerController.currentRoad.transform);
             endCallback();
 
         });
