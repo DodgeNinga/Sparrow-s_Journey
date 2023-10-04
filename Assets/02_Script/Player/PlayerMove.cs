@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour
     private Animator animator;
     private PlayerController playerController;
 
+    public Action GetFade;
+
     private void Awake()
     {
         
@@ -18,7 +20,7 @@ public class PlayerMove : MonoBehaviour
 
     }
 
-    public void ExecuteMove(List<RoadClass> roads, Action endCallback)
+    public void ExecuteMove(List<RoadRoot> roads, Action endCallback)
     {
 
         Sequence seq = DOTween.Sequence();
@@ -26,7 +28,7 @@ public class PlayerMove : MonoBehaviour
         animator.SetBool(WALKHASH, true);
         transform.SetParent(null);
 
-        foreach(var item in roads)
+        foreach (var item in roads)
         {
 
             seq.AppendCallback(() =>
@@ -47,6 +49,16 @@ public class PlayerMove : MonoBehaviour
 
             });
             seq.Append(transform.DOMove(item.road.GetMovePos(), 0.3f).SetEase(Ease.Linear));
+
+            if (item.transform.CompareTag("Goal"))
+            {
+
+                seq.OnComplete(() =>
+                {
+                    GetFade?.Invoke();
+                });
+
+            }
 
         }
 
