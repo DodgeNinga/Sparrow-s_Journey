@@ -20,7 +20,7 @@ public class PlayerMove : MonoBehaviour
 
     }
 
-    public void ExecuteMove(List<RoadRoot> roads, Action endCallback)
+    public void ExecuteMove(List<RoadClass> roads, Action endCallback)
     {
 
         Sequence seq = DOTween.Sequence();
@@ -50,7 +50,7 @@ public class PlayerMove : MonoBehaviour
             });
             seq.Append(transform.DOMove(item.road.GetMovePos(), 0.3f).SetEase(Ease.Linear));
 
-            if (item.transform.CompareTag("Goal"))
+            if (item.road.transform.CompareTag("Goal"))
             {
 
                 seq.OnComplete(() =>

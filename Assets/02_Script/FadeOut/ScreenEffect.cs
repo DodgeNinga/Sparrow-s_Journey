@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class ScreenEffect : MonoBehaviour
 {
+
     public Image panel;
     private PlayerMove playerMove;
     public string loadSceneName;
@@ -16,7 +17,7 @@ public class ScreenEffect : MonoBehaviour
     private void Awake()
     {
 
-        playerMove = FindObjectOfType<PlayerMove>().GetComponent<PlayerMove>();
+        playerMove = FindObjectOfType<PlayerMove>();
 
     }
 
