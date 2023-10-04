@@ -48,6 +48,7 @@ public class RotateHandle : MonoBehaviour
         if(isAutoRotating) return;
 
         if (isKeyDown) RotateObject();
+        else return;
 
         if (Input.GetMouseButtonUp(0) && isAutoRotating == false)
         {
@@ -63,6 +64,9 @@ public class RotateHandle : MonoBehaviour
                 isAutoRotating = false;
                 rotateEndEvent?.Invoke();
                 lastRotate = vec.value;
+
+                if (vec.value == 360) vec.value = 0;
+
                 rotateChangeEvent?.Invoke(vec.value);
                 
                 

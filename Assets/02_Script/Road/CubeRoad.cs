@@ -6,6 +6,8 @@ using UnityEngine;
 public class CubeRoad : RoadRoot
 {
 
+    private LookDir saveDir;
+
     private Vector3[] rayPoints => new Vector3[]
         {
 
@@ -38,6 +40,35 @@ public class CubeRoad : RoadRoot
 
     }
 
+    public void SetDir(int dir)
+    {
+
+        saveDir = (LookDir)dir;
+
+    }
+
+    public void Connect(RoadRoot road)
+    {
+
+        if (connected.Find(x => x.road == road) != null) return;
+
+        connected.Add(new RoadClass
+        {
+
+            road = road,
+            dir = saveDir
+
+        });
+
+    }
+
+    public void Disconncet(RoadRoot road)
+    {
+
+        connected.Remove(connected.Find(x => x.road == road));
+
+    }
+
     public override void ConnectRoad()
     {
 
@@ -49,6 +80,8 @@ public class CubeRoad : RoadRoot
 
                 if(hit.transform.TryGetComponent<RoadRoot>(out var compo))
                 {
+
+                    if (connected.Find(x => x.road == compo) != null) continue;
 
                     connected.Add(new RoadClass {road = compo, dir = GetLookDir(dir)});
 

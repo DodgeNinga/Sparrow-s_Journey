@@ -36,10 +36,10 @@ public class PlayerMove : MonoBehaviour
 
                 var dir = item.dir switch
                 {
-                    LookDir.front => Vector3.forward,
-                    LookDir.back => -Vector3.forward,
-                    LookDir.left => -Vector3.right,
-                    LookDir.right => Vector3.right,
+                    LookDir.front => item.road.transform.forward,
+                    LookDir.back => -item.road.transform.forward,
+                    LookDir.left => -item.road.transform.right,
+                    LookDir.right => item.road.transform.right,
                     _ => transform.forward,
 
                 };
