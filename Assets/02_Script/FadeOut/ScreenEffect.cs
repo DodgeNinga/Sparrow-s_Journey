@@ -50,5 +50,4 @@ public class ScreenEffect : MonoBehaviour
 
     }
 
-
 }
