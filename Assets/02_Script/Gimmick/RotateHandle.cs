@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEditor.PlayerSettings;
 
 public class RotateHandle : MonoBehaviour
 {
@@ -40,6 +41,16 @@ public class RotateHandle : MonoBehaviour
 
         roads = rotateObject.GetComponentsInChildren<RoadRoot>().ToList();
 
+
+    }
+
+    private void Start()
+    {
+
+        var vec = GetRotateVec();
+        rotateChangeEvent?.Invoke(vec.value);
+        
+
     }
 
     private void Update()
@@ -68,8 +79,9 @@ public class RotateHandle : MonoBehaviour
                 if (vec.value == 360) vec.value = 0;
 
                 rotateChangeEvent?.Invoke(vec.value);
-                
-                
+                playerController.clickAble = true;
+
+
             });
 
         }
@@ -89,8 +101,16 @@ public class RotateHandle : MonoBehaviour
         }
 
         if (!playerController.clickAble) return;
+        playerController.clickAble = false;
         isKeyDown = true;
         originPos = Input.mousePosition;
+
+    }
+
+    private void OnDisable()
+    {
+
+        rotateChangeEvent?.Invoke(33333);
 
     }
 
@@ -100,7 +120,7 @@ public class RotateHandle : MonoBehaviour
         float curRotate = offset switch
         {
 
-            RotateOffset.X => rotateObject.eulerAngles.x,
+            RotateOffset.X => GetXVAL(),
             RotateOffset.Y => rotateObject.eulerAngles.y,
             RotateOffset.Z => rotateObject.eulerAngles.z,
             _ => 0
@@ -109,6 +129,9 @@ public class RotateHandle : MonoBehaviour
 
         float min = rotateArr.Min(x => Mathf.Abs(x - curRotate));
         float value = rotateArr.First(x => Mathf.Abs(x - curRotate) == min);
+
+        Debug.Log(transform.localEulerAngles.x);
+
 
         return offset switch
         {
@@ -119,6 +142,19 @@ public class RotateHandle : MonoBehaviour
             _ => (Vector3.zero, 0)
 
         };
+
+        float GetXVAL()
+        {
+
+
+            var mousePos = Input.mousePosition;
+            var pos = mousePos - originPos;
+
+            var value = Mathf.Atan2(pos.x, pos.y) * Mathf.Rad2Deg;
+
+            return value + lastRotate;
+
+        }
 
     }
 
@@ -136,7 +172,7 @@ public class RotateHandle : MonoBehaviour
 
                     var value = Mathf.Atan2(pos.x, pos.y) * Mathf.Rad2Deg;
 
-                    rotateObject.rotation = Quaternion.AngleAxis(value, Vector3.right);
+                    rotateObject.rotation = Quaternion.AngleAxis(value + lastRotate, Vector3.right);
 
                     break;
 

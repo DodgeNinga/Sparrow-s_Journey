@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     public void Exit()
     {
 
+        Time.timeScale = 1;
         SceneManager.LoadScene("StageSelect");
 
     }

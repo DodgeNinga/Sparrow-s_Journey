@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 {
 
     [field:SerializeField] public RoadRoot currentRoad { get; private set; }
+    [field:SerializeField] public LayerMask layerMask { get; private set; }
+    [field:SerializeField] public GameObject chageObj { get; private set; }
 
     private PlayerMove playerMove;
 
@@ -182,5 +184,8 @@ public class PlayerController : MonoBehaviour
         });
 
     }
+
+    public void ChangeTop() => chageObj.layer = 6;
+    public void ChangeDef() => chageObj.layer = 0;
 
 }
