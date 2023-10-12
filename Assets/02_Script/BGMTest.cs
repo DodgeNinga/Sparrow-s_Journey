@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class BGMTest : MonoBehaviour
 {
+
+    [SerializeField] private string bgmName;
+
     private void Start()
     {
-        SoundManager.instance.PlayBGM("Stage1");
+        SoundManager.instance.PlayBGM(bgmName);
     }
 }

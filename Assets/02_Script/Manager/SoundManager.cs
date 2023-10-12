@@ -24,9 +24,20 @@ public class SoundManager : MonoBehaviour
     {
         if(instance == null)
         {
+
             instance = this;
+            DontDestroyOnLoad(gameObject);
+
         }
         
+    }
+
+    private void Start()
+    {
+
+        bgmPlayer.clip = bgm[0].clip;
+        bgmPlayer.Play();
+
     }
 
     public void PlayBGM(string bgmName)
