@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7181,12 +7181,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 738829925495774599, guid: 26dcca1c7622ec94a96d34e3ea050df9, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 769126848679891528, guid: 26dcca1c7622ec94a96d34e3ea050df9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -1524695374555204392, guid: 65a24ddb4f1dda14188ae8370e996cd8, type: 3}
+      objectReference: {fileID: 2100000, guid: ec4c9a6d196efbf4e9c72f562fb24fa3, type: 2}
     - target: {fileID: 1167552324785075378, guid: 26dcca1c7622ec94a96d34e3ea050df9, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -7346,6 +7346,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   containsRot: 1
+--- !u!114 &791892142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791892139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &812420648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16926,7 +16944,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 192
+    m_Bits: 448
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -16950,10 +16968,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 988549041}
+  volumeTrigger: {fileID: 2039853208}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 2147483647
+    m_Bits: 256
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -16992,8 +17010,8 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
+  m_ShowToolkit: 1
+  m_ShowCustomSorter: 1
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
