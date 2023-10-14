@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
-using static UnityEditor.PlayerSettings;
+using UnityEngine.EventSystems;
 
 public class RotateHandle : MonoBehaviour
 {
@@ -44,12 +44,12 @@ public class RotateHandle : MonoBehaviour
 
     }
 
+    
     private void Start()
     {
 
         var vec = GetRotateVec();
         rotateChangeEvent?.Invoke(vec.value);
-        
 
     }
 
