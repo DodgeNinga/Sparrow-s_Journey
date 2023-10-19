@@ -1144,6 +1144,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &66969335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1221,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &77226471
 PrefabInstance:
@@ -2223,6 +2226,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &136036937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2452,6 +2458,90 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 22954715104824743, guid: 6fd5042511441df4a978654dce339c20, type: 3}
   m_PrefabInstance: {fileID: 152344020}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &156931322
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 414848646}
+    m_Modifications:
+    - target: {fileID: 100000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_Name
+      value: CFX2_PickupDiamond2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+--- !u!198 &156931323 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19800000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+  m_PrefabInstance: {fileID: 156931322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &156931324 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+  m_PrefabInstance: {fileID: 156931322}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &167008934
 GameObject:
@@ -4670,6 +4760,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &298718836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5ab0c5849f607aa47b924b0e65bcc7ad, type: 3}
@@ -6010,6 +6103,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 348617673}
+  - {fileID: 156931324}
   m_Father: {fileID: 998190714}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
@@ -6042,6 +6136,9 @@ MonoBehaviour:
   - road: {fileID: 1640370848}
     dir: 3
   <moveAble>k__BackingField: 0
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &417157026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6997,6 +7094,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &477960232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7203,7 +7303,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &489426729
 PrefabInstance:
@@ -8573,6 +8673,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &577692676
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9095,6 +9198,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &601763729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11948,6 +12054,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &771213333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12868,6 +12977,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &833528249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14262,6 +14374,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &937714002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16790,6 +16905,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1072654376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0d349e8afb9d07945bed13ef029aaf85, type: 3}
@@ -17136,7 +17254,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 17c9a342af6358543ab808822fbf69a6, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 17c9a342af6358543ab808822fbf69a6, type: 3}
       propertyPath: m_LocalScale.x
@@ -18471,6 +18589,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1197319741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18866,6 +18987,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1223373188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 10d856d417668064b8cbed0439324d70, type: 3}
@@ -21574,6 +21698,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1376199441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23895,6 +24022,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 156931323}
+        m_TargetAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1196548881}
+        m_TargetAssemblyTypeName: CubeRoad, Assembly-CSharp
+        m_MethodName: PlayPing
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -26712,6 +26863,9 @@ MonoBehaviour:
   - road: {fileID: 414848648}
     dir: 2
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1645312789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26975,7 +27129,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1657949511
 PrefabInstance:
@@ -27698,7 +27852,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 882806459202166902, guid: 1059cbaf238b1f74f8cf0dc1ceb3a718, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 882806459202166902, guid: 1059cbaf238b1f74f8cf0dc1ceb3a718, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28025,6 +28179,9 @@ MonoBehaviour:
   - road: {fileID: 167008936}
     dir: 2
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1742056394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28646,6 +28803,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1775714758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30477,6 +30637,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1869948889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30785,6 +30948,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1893214070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31360,6 +31526,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1927534934
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31669,6 +31838,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1951727159
 GameObject:
   m_ObjectHideFlags: 0
@@ -31731,6 +31903,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1952989405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33130,6 +33305,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &2017628794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33274,6 +33452,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <connected>k__BackingField: []
   <moveAble>k__BackingField: 1
+  compConnectEvt:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &2035387337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f882507dfd4dc7343b8922baca0c3b0d, type: 3}

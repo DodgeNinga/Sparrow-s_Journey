@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 
 public class CubeRoad : RoadRoot
 {
+
+    [SerializeField] private UnityEvent compConnectEvt;
 
     private LookDir saveDir;
 
@@ -60,6 +62,14 @@ public class CubeRoad : RoadRoot
 
         });
 
+        if (road.moveAble)
+        {
+
+            compConnectEvt?.Invoke();
+            PlayPing();
+
+        }
+
     }
 
     public void Disconncet(RoadRoot road)
@@ -68,6 +78,8 @@ public class CubeRoad : RoadRoot
         connected.Remove(connected.Find(x => x.road == road));
 
     }
+
+    public void PlayPing() => SoundManager.instance.PlayerSFX("Ping");
 
     public override void ConnectRoad()
     {
