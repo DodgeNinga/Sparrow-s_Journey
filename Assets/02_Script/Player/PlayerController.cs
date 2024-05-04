@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [field:SerializeField] public LayerMask layerMask { get; private set; }
     [field:SerializeField] public GameObject chageObj { get; private set; }
 
+    [SerializeField] private GameObject pingPrefab;
+
     private PlayerMove playerMove;
 
     public bool clickAble  = true;
@@ -118,6 +120,8 @@ public class PlayerController : MonoBehaviour
         {
 
             currentRoad = roadContainer[endKey].Last().road;
+            Instantiate(pingPrefab, currentRoad.GetMovePos(), Quaternion.Euler(-90, 0, 0));
+            SoundManager.instance.PlayerSFX("Ping");
             playerMove.ExecuteMove(roadContainer[endKey].ToList(), () => { clickAble = true; });
 
         }
